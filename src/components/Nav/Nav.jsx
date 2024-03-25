@@ -1,10 +1,12 @@
-import SearchBar from "../SearchBar/SearchBar";
-//import style from "./nav.module.css";
+// import React from 'react'
 
-const Nav = () => { //(onSearch) // <div className={style.container}> // <SearchBar onSearch={onSearch}/>
+import SearchBar from "../SearchBar/SearchBar"
+import style from "./nav.module.css"
+
+const Nav = () => {
   return (
-    <div>       
-        <SearchBar /> 
+    <div className={style.container}>
+      <SearchBar />
     </div>
   )
 }
