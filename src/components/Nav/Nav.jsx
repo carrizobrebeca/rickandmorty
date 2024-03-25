@@ -1,10 +1,10 @@
 import SearchBar from "../SearchBar/SearchBar";
-import style from "./nav.module.css";
+//import style from "./nav.module.css";
 
-const Nav = (onSearch) => {
+const Nav = () => { //(onSearch) // <div className={style.container}> // <SearchBar onSearch={onSearch}/>
   return (
-    <div className={style.container}>
-        <SearchBar onSearch={onSearch}/>
+    <div>       
+        <SearchBar /> 
     </div>
   )
 }
