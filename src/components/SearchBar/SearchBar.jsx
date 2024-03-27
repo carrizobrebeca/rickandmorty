@@ -1,12 +1,25 @@
-import { Container, Button} from "./styled";  
+import { Container, Button } from "./styled";
+import { useState } from "react";
 
-export default function SearchBar(onSearch) {
-   return (
-      <Container>
-         
-            <input type='search' />
-            <Button onClick={onSearch}>Agregar</Button>
-         
-      </Container>
-   );
+export default function SearchBar({ onSearch }) {
+  
+  const [id, setId] = useState("");
+
+  const handleChange = (e) => {
+    setId(e.target.value);
+
+  };
+  
+  const clearInput = () => {
+    setId("");
+  };
+  
+  return (
+    <Container>
+      {/* <ImputContainer> */}
+      <input onChange={handleChange}  value={id} type="number"/>
+      <Button onClick={() => {onSearch(id); clearInput();}}>Agregar</Button>
+      {/* </ImputContainer> */}
+    </Container>
+  );
 }

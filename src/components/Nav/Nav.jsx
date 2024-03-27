@@ -1,14 +1,14 @@
 // import React from 'react'
 
-import SearchBar from "../SearchBar/SearchBar"
-import style from "./nav.module.css"
+import SearchBar from "../SearchBar/SearchBar";
+import style from "./nav.module.css";
 
-const Nav = () => {
+const Nav = ({ onSearch }) => {
   return (
     <div className={style.container}>
-      <SearchBar />
+      <SearchBar onSearch={onSearch} />
     </div>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;
