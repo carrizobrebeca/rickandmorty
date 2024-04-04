@@ -1,0 +1,70 @@
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura para que ocupe todo el alto de la ventana */
+}
+
+.contentContainer {
+  text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+.contenedor {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  width: 500px;
+  height: 500px;
+}
+
+.contenedor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://staticdelivery.nexusmods.com/mods/1151/images/528-0-1447526230.png');
+  background-size: cover;
+  z-index: 1;
+}
+
+h1 {
+  position: relative;
+  z-index: -1;
+  text-align: center;
+  line-height: 450px;
+  margin: 0;
+  padding: 0;
+  color: chartreuse;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 550px;
+}
+
+h2{
+  color: chartreuse;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
+
+.btn {
+  background-color: chartreuse;
+  color: black;
+  border-radius: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.ft {
+  color: chartreuse;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+  

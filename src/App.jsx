@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import axios from "axios";
 import Detail from "./components/Detail/Detail.jsx";
+import Error from "./components/Error/Error.jsx";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -46,6 +47,7 @@ function App() {
         <Route path="/home" element={<Cards characters={characters} onClose={onClose} />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/detail/:id" element={<Detail/>}/>
+        <Route path="/error" element={<Error/>}/>
       </Routes>
       
       {/* <Cards characters={characters} onClose={onClose} /> */}
