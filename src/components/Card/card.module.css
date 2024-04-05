@@ -63,7 +63,7 @@ img {
   opacity: 0.6;
 }
 .name:hover{
-  cursor: progress;
+  cursor: pointer;
   opacity: 1;
 }
 .description {
