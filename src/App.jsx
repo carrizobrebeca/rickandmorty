@@ -44,6 +44,12 @@ function App() {
 
 
       <Routes>
+      <Route path="/" element={
+          <>
+            <Nav onSearch={onSearch} />
+            <Cards characters={characters} onClose={onClose} />
+          </>
+        } />
         <Route path="/home" element={
           <>
             <Nav onSearch={onSearch} />

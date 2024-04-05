@@ -60,8 +60,12 @@ img {
   font-family: monospace;
   box-shadow: rgba(0, 0, 0, 0.61) 0px 5px 5px 0px;
   border: 1.5px solid rgb(1, 255, 234);
+  opacity: 0.6;
 }
-
+.name:hover{
+  cursor: progress;
+  opacity: 1;
+}
 .description {
   font-family: monospace;
   font-size: 15px;
