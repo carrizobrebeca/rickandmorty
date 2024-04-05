@@ -5,10 +5,11 @@ import Nav from "./components/Nav/Nav.jsx";
 import About from "./components/About/About.jsx";
 //import characters from "./data.js";
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import axios from "axios";
 import Detail from "./components/Detail/Detail.jsx";
 import Error from "./components/Error/Error.jsx";
+import LoginView from "./components/views/LoginView.jsx";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -47,7 +48,7 @@ function App() {
       <Route path="/" element={
           <>
             <Nav onSearch={onSearch} />
-            <Cards characters={characters} onClose={onClose} />
+            <LoginView />
           </>
         } />
         <Route path="/home" element={
