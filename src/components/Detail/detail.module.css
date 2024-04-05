@@ -1,7 +1,9 @@
-/* @font-face{
-    font-family: 'Get Schwify';
-    src: url(..//..//recsource/font/get_schwify.ttf);
-} */
+.pageCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura según tu necesidad */
+}
 
 .container {
   margin: 20px;
@@ -9,60 +11,44 @@
   padding: 12px;
   border-radius: 0px 0px 30px 30px;
   position: relative;
-  box-shadow: rgba(255, 255, 255, 0.123) 0px 5px 5px 0px;
-  width: 330px;
+  box-shadow: rgba(255, 255, 255, 0.315) 0px 70px 70px 0px;
+  width: 600px; /* Aumenta el ancho del contenedor principal */
+  opacity: 0.6;
+  display: flex; /* Nueva línea */
+  align-items: center; /* Nueva línea */
   opacity: 0.6;
 }
 
 .container:hover{
-    opacity: 1;
-}
-
-.btn {
-  font-size: 20px;
-  background-color: rgba(63, 235, 247, 0.815);
-  font-weight: 700px;
-  cursor: pointer;
-  border-radius: 200px;
-  padding: 8px;
-  position: absolute;
-  right: 10px;
-  z-index: 1;
-  opacity: 0.6;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-.container:hover {
   opacity: 1;
 }
 
 .imgContainer {
   position: relative;
-
   max-height: 300px;
-}
-
-img {
-  width: auto;
-  border-radius: 200px;
+  margin-right: 20px; /* Espacio entre la imagen y la descripción */
 }
 
 .name {
   position: absolute;
-  top: 230px;
+  bottom: 0;
+  left: 0;
   background-color: rgba(25, 255, 255, 0.404);
   margin: 8px;
   border-radius: 10px;
-  padding: 5px 10px 5 px 10px;
+  padding: 5px 10px 5px 10px;
   font-family: monospace;
-  box-shadow: rgba(0, 0, 0, 0.61) 0px 5px 5px 0px;
+  box-shadow: rgba(0, 0, 0, 0.61) 0px 15px 15px 0px;
   border: 1.5px solid rgb(1, 255, 234);
+  
+}
+
+.details {
+  flex: 1; /* Nueva línea */
 }
 
 .description {
+  text-align: center;
   font-family: monospace;
   font-size: 15px;
 }

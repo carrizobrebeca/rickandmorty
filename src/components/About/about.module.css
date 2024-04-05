@@ -1,0 +1,24 @@
+.pageCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura según tu necesidad */
+  font-size: 25px;
+}
+.container {
+  margin: 20px;
+  background-color: rgba(219, 224, 224, 0.39);
+  padding: 12px;
+  border-radius: 0px 0px 30px 30px;
+  position: relative;
+  box-shadow: rgba(255, 255, 255, 0.123) 0px 5px 5px 0px;
+  width: 330px;
+  opacity: 0.6;
+}
+
+.container:hover {
+  opacity: 1;
+}
+
+
+

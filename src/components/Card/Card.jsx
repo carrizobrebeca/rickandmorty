@@ -28,10 +28,10 @@ export default function Card({
       </div>
 
       <div className={style.description}>
-        <h2>Status: <span>{status}</span></h2>
-        <h2>Specie: <span>{species}</span></h2>
-        <h2>Gender: <span>{gender}</span></h2>
-        <h2>Origin: <span>{origin}</span></h2>
+        <h2><span>{status}</span></h2>
+        <h2><span>{species}</span></h2>
+        <h2><span>{gender}</span></h2>
+        <h2><span>{origin}</span></h2>
       </div>
 
     </div>

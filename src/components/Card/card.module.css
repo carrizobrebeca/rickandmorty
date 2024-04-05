@@ -9,7 +9,7 @@
   padding: 12px;
   border-radius: 0px 0px 30px 30px;
   position: relative;
-  box-shadow: rgba(255, 255, 255, 0.123) 0px 5px 5px 0px;
+  box-shadow: rgba(255, 255, 255, 0.363) 0px 25px 25px 0px;
   width: 330px;
   opacity: 0.6;
 }
@@ -41,13 +41,16 @@
 
 .imgContainer {
   position: relative;
-
   max-height: 300px;
+ 
 }
+
 
 img {
   width: auto;
-  border-radius: 200px;
+  border-radius: 200px; 
+  box-shadow: rgba(0, 0, 0, 0.61) 0px 20px 20px 0px;
+  border-radius: 500px;
 }
 
 .name {

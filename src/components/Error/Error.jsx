@@ -11,7 +11,7 @@ const Error = ({ onSearch }) =>{
                     <h1>44</h1>
                 </div>
                 <footer className={style.ft}>The page you are trying to search has been moved to another universe</footer>
-                <button className={style.btn} onClick={() => navigate(-1)}>Get Me Home</button>
+                <button className={style.btn} onClick={() => navigate("/home")}>Get Me Home</button>
             </div>
         </div>
     ) 

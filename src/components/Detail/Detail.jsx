@@ -22,14 +22,8 @@ const Detail = () => {
   }, [id])
 
   return !character ? <div>Cargando...</div> : (
+    <div className={style.pageCenter}>
     <div className={style.container}>
-
-      <div className={style.buttonContainer}>
-        <button className={style.btn} onClick={() => onClose(id)}>
-          X
-        </button>
-      </div>
-
       <div className={style.imgContainer}>
         <img src={character.image} alt="" />
         <h2 className={style.name}>{character.name}</h2>
@@ -50,6 +44,7 @@ const Detail = () => {
         </h2>
       </div>
     </div>
+    </div>  
   );
 };
 
