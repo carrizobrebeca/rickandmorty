@@ -14,9 +14,9 @@ function App() {
   const [characters, setCharacters] = useState([]);
 
   //const onClose = () => window.alert("Emulamos que se cierra la card");
-  
+
   const onClose = (id) => {
-    console.log(id);
+
     let filterCharacters = characters.filter((ch) => {
       return ch.id !== id;
     });
@@ -41,15 +41,30 @@ function App() {
   return (
     <div className="App">
       {/* <SearchBar onSearch={(characterID) => window.alert(characterID)} /> */}
-      <Nav onSearch={onSearch} />
+
 
       <Routes>
-        <Route path="/home" element={<Cards characters={characters} onClose={onClose} />}/>
-        <Route path="/about" element={<About />}/>
-        <Route path="/detail/:id" element={<Detail/>}/>
-        <Route path="/error" element={<Error/>}/>
+        <Route path="/home" element={
+          <>
+            <Nav onSearch={onSearch} />
+            <Cards characters={characters} onClose={onClose} />
+          </>
+        } />
+        <Route path="/about" element={
+          <>
+            <Nav onSearch={onSearch} />
+            <About />
+          </>
+        } />
+        <Route path="/detail/:id" element={
+          <>
+            <Nav onSearch={onSearch} />
+            <Detail />
+          </>
+        } />
+        <Route path="/*" element={<Error />} />
       </Routes>
-      
+
       {/* <Cards characters={characters} onClose={onClose} /> */}
     </div>
   );

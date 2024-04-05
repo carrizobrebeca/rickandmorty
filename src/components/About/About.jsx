@@ -1,6 +1,7 @@
+
 const About = () =>{
    return(
-    <h1>Soy un About</h1>
+    <h2>Soy un About</h2>
    ) 
 }
 

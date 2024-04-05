@@ -6,7 +6,7 @@ const Error = ({ onSearch }) =>{
     return(
         <div className={style.pageContainer}>
             <div className={style.contentContainer}>
-                <h2>Error</h2>
+                <h3>Error</h3>
                 <div className={style.contenedor}>
                     <h1>44</h1>
                 </div>
