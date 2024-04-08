@@ -47,7 +47,6 @@ function App() {
       <Routes>
       <Route path="/" element={
           <>
-            <Nav onSearch={onSearch} />
             <LoginView />
           </>
         } />
