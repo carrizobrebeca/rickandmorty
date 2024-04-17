@@ -1,4 +1,5 @@
-import Form from "../Form/Form"
+import Form from "../components/Form/Form"
+
 
 function LoginView() {
   return (

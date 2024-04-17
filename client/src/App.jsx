@@ -9,7 +9,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import axios from "axios";
 import Detail from "./components/Detail/Detail.jsx";
 import Error from "./components/Error/Error.jsx";
-import LoginView from "./components/views/LoginView.jsx";
+import LoginView from "./views/LoginView.jsx";
+
 
 function App() {
   const [characters, setCharacters] = useState([]);
