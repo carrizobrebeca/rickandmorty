@@ -1,10 +1,10 @@
 import Form from "../components/Form/Form"
 
 
-function LoginView() {
+function LoginView({login}) {
   return (
     <div>
-        <Form />
+        <Form login={login}/>
     </div>
   )
 }
