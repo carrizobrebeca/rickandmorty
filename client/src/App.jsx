@@ -10,6 +10,9 @@ import axios from "axios";
 import Detail from "./components/Detail/Detail.jsx";
 import Error from "./components/Error/Error.jsx";
 import LoginView from "./views/LoginView.jsx";
+import Favorites from "./components/Favorites/Favorites.jsx";
+
+
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -87,8 +90,18 @@ function App() {
               <Detail />
             </>
           }
-        />
+          />
+          <Route
+          path="/favorite"
+          element={
+            <>
+              <Nav onSearch={onSearch} />
+              <Favorites />
+            </>
+          }
+          />
         <Route path="/*" element={<Error />} />
+        
       </Routes>
 
       {/* <Cards characters={characters} onClose={onClose} /> */}
