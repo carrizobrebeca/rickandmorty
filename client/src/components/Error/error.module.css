@@ -3,8 +3,9 @@
   justify-content: center;
   align-items: center;
   height: 100vh; /* Ajusta la altura para que ocupe todo el alto de la ventana */
-  
-
+  background: url('http://cdn130.picsart.com/260387705033202.gif?to=min&r=1024') no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .contentContainer {
@@ -31,14 +32,14 @@
   background-image: url('https://staticdelivery.nexusmods.com/mods/1151/images/528-0-1447526230.png');
   background-position: center;
   background-size: cover;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   
 }
 
 h1 {
   position: relative;
-  z-index: -1;
+  z-index: 1;
  
   text-align: center;
   line-height: 450px;

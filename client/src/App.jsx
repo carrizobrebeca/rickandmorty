@@ -64,6 +64,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<LoginView login={login} />} />
+        <Route path="/*" element={<Error />} />
         <Route
           path="/home"
           element={
@@ -92,7 +93,7 @@ function App() {
           }
           />
           <Route
-          path="/favorite"
+          path="/favorites"
           element={
             <>
               <Nav onSearch={onSearch} />
@@ -100,7 +101,7 @@ function App() {
             </>
           }
           />
-        <Route path="/*" element={<Error />} />
+        
         
       </Routes>
 

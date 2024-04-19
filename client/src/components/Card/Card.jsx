@@ -34,12 +34,10 @@ function Card({
     isFav
       ? removeFav(id)
       : addFav({
-        id,
         name,
         status,
-        origin,
         image
-      
+
         });
     setIsFav(!isFav);
   };
@@ -61,7 +59,7 @@ function Card({
       <div className={style.imgContainer}>
         <img src={image} alt="" />
         <Link to={`/detail/${id}`}>
-          <h2 className={style.name}>{name}</h2>
+          <h2 className={style.name}>{name} | {id}</h2>
         </Link>
       </div>
 
