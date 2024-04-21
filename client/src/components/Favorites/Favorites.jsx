@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect, useDispatch } from "react-redux";
 import Cards from "../Cards/Cards";
-import { filterFav, orderFav } from "../../redux/actions";
-
+import { filterFavs, orderFavs } from "../../redux/actions";
 
 const Favorites = ({ myFavorites }) => {
-
   const dispatch = useDispatch();
 
-  const optionsGender = ["Male", "Female", "Genderless", "unknown"];
+  const optionsGender = ["All", "Male", "Female", "Genderless", "unknown"];
+
+  const [aux, setAux] = useState(false);
 
   const handleOrder = (e) => {
-    dispatch(orderFav(e.target.value))
-  }
+    dispatch(orderFavs(e.target.value));
+    setAux(!aux)
+  };
 
   const handleFilter = (e) => {
-    dispatch(filterFav(e.target.value))
-  }
+    dispatch(filterFavs(e.target.value));
+    setAux(!aux)
+  };
 
   return (
     <div>

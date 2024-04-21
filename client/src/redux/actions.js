@@ -14,18 +14,18 @@ const removeFav = (id) => {
   };
 };
 
-const filterFav = (gender) => {
+const filterFavs = (gender) => {
   return {
     type: FILTER_FAV,
     payload: gender,
   };
 };
 
-const orderFav = (order) => {
+const orderFavs = (order) => {
   return {
     type: ORDER_FAV,
     payload: order,
   };
 };
 
-export { addFav, removeFav, filterFav, orderFav };
+export { addFav, removeFav, filterFavs, orderFavs };

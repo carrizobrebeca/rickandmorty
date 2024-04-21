@@ -18,7 +18,7 @@ function Card({
   onClose,
   addFav,
   removeFav,
-  myFavorites
+  myFavorites,
 }) {
   const [isFav, setIsFav] = useState(false);
 
@@ -34,10 +34,13 @@ function Card({
     isFav
       ? removeFav(id)
       : addFav({
-        name,
-        status,
-        image
-
+          id,
+          name,
+          status,
+          species,
+          gender,
+          origin,
+          image,
         });
     setIsFav(!isFav);
   };
@@ -59,7 +62,9 @@ function Card({
       <div className={style.imgContainer}>
         <img src={image} alt="" />
         <Link to={`/detail/${id}`}>
-          <h2 className={style.name}>{name} | {id}</h2>
+          <h2 className={style.name}>
+            {name} | {id}
+          </h2>
         </Link>
       </div>
 
@@ -94,9 +99,9 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const mapStateToProps = (state) => {
-  return{
-    myFavorites: state.myFavorites
-  }
+  return {
+    myFavorites: state.myFavorites,
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);
