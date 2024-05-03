@@ -20,16 +20,26 @@ function App() {
   const [access, setAccess] = useState(false);
 
   const navigate = useNavigate();
-
-  function login(userData) {
-    const { email, password } = userData;
-    const URL = 'http://localhost:3001/rickandmorty/login/';
-    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-       const { access } = data;
-       setAccess(data);
-       access && navigate('/home');
-    });
- }
+  async function login(userData) {
+    try {
+      const { email, password } = userData;
+      const URL = "http://localhost:3001/rickandmorty/login/";
+      const {data} = await axios(URL + `?email=${email}&password=${password}`);
+      setAccess(data.access);
+      access && navigate("/home");
+    } catch (error) {
+      window.alert("Usuario o contraseña incorrecta");
+    }
+  }
+//   function login(userData) {
+//     const { email, password } = userData;
+//     const URL = 'http://localhost:3001/rickandmorty/login/';
+//     axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+//        const { access } = data;
+//        setAccess(data);
+//        access && navigate('/home');
+//     });
+//  }
 
   // const EMAIL = "rebeca@mail.com";
   // const PASSWORD = "123asd";
@@ -48,6 +58,18 @@ function App() {
   //const onClose = () => window.alert("Emulamos que se cierra la card");
 
   const { pathname } = useLocation();
+
+  // async function onSearch(id) {
+  //   try {
+  //     const { data } = await axios(
+  //       `http://localhost:3001/api/character/${id}`
+  //     );
+  //     setCharacters((oldChars) => [...oldChars, data]);
+  //   } catch (error) {
+  //     window.alert("¡No hay personajes con este ID!");
+  //   }
+  // }
+  
   const onClose = (id) => {
     let filterCharacters = characters.filter((ch) => {
       return ch.id !== id;
