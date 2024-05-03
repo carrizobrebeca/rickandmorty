@@ -1,3 +1,4 @@
+import axios from "axios";
 import { ADD_FAV, REMOVE_FAV, FILTER_FAV, ORDER_FAV } from "./actions-type";
 
 const initialState = {
@@ -8,21 +9,22 @@ const initialState = {
 function rootReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_FAV:
-      return {
-        ...state,
-        myFavorites: [...state.myFavorites, action.payload],
-        allCharacters: [...state.allCharacters, action.payload],
-      };
+      return { ...state, myFavorites: action.payload, allCharacters: action.payload };
+      // return {
+      //   ...state,
+      //   myFavorites: [...state.myFavorites, action.payload],
+      //   allCharacters: [...state.allCharacters, action.payload],
+      // };
 
     case REMOVE_FAV:
-      
-      const filteredFavs = state.myFavorites.filter((fav) => {
-        fav.id !== Number(action.payload);
-      });
-      return {
-        ...state,
-        myFavorites: filteredFavs,
-      };
+      return { ...state, myFavorites: action.payload };
+      // const filteredFavs = state.myFavorites.filter((fav) => {
+      //   fav.id !== Number(action.payload);
+      // });
+      // return {
+      //   ...state,
+      //   myFavorites: filteredFavs,
+      // };
 
     case FILTER_FAV:
 

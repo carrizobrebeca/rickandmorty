@@ -21,15 +21,25 @@ function App() {
 
   const navigate = useNavigate();
 
-  const EMAIL = "rebeca@mail.com";
-  const PASSWORD = "123asd";
+  function login(userData) {
+    const { email, password } = userData;
+    const URL = 'http://localhost:3001/rickandmorty/login/';
+    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+       const { access } = data;
+       setAccess(data);
+       access && navigate('/home');
+    });
+ }
 
-  const login = (userData) => {
-    if (userData.email === EMAIL && userData.password === PASSWORD) {
-      setAccess(true);
-      navigate("/home");
-    }
-  };
+  // const EMAIL = "rebeca@mail.com";
+  // const PASSWORD = "123asd";
+
+  // const login = (userData) => {
+  //   if (userData.email === EMAIL && userData.password === PASSWORD) {
+  //     setAccess(true);
+  //     navigate("/home");
+  //   }
+  // };
 
   useEffect(() => {
     !access && navigate("/");
@@ -93,7 +103,7 @@ function App() {
           }
           />
           <Route
-          path="/favorites"
+          path="/fav"
           element={
             <>
               <Nav onSearch={onSearch} />
