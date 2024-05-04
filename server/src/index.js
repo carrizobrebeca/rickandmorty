@@ -3,13 +3,23 @@
 
 // const PORT = 3001;
 //const {getCharById} = require("./controllers/getCharById")
+require("./DB_connection");
 const router = require("./routes/index");
 
 const express = require("express");
 
 const server = express();
 const PORT = 3001;
+const { conn } = require("./DB_connection")
 
+try {
+  server.listen(PORT, async () => {
+    console.log(`Server raised in port: ${PORT}`);
+    await conn.sync({})
+  });
+} catch (error) {
+  
+}
 server.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Credentials', 'true');
@@ -27,9 +37,9 @@ server.use((req, res, next) => {
 server.use(express.json());
 server.use("/rickandmorty", router);
 
-server.listen(PORT, () => {
-  console.log(`Server raised in port: ${PORT}`);
-});
+// server.listen(PORT, () => {
+//   console.log(`Server raised in port: ${PORT}`);
+// });
 
 // http
 //   .createServer((req, res) => {
