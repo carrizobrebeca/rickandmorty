@@ -12,6 +12,7 @@ const addFav = (character) => {
      });
   };
 };
+
 // const addFav = (character) => {
 //   return {
 //     type: ADD_FAV,
@@ -30,6 +31,7 @@ const removeFav = (id) => {
      });
   };
 };
+
 // const removeFav = (id) => {
 //   return {
 //     type: REMOVE_FAV,

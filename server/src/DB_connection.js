@@ -41,11 +41,12 @@ UserModel(sequelize);
 // Ejercicio 06
 // ¡Relaciona tus modelos aquí abajo!
 const { User, Favorite } = sequelize.models;
+///user tiene una relacion de muchos a muchos con favorite a raves de la tabla intermedia user_favorite
 User.belongsToMany(Favorite, {through: "user_favorite"});
 Favorite.belongsToMany(User, {through: "user_favorite"});
 
 module.exports = {
-  // User,
-  // Favorite,
+  User,
+  Favorite,
   conn: sequelize,
 };

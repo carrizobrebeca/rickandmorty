@@ -41,7 +41,7 @@ function App() {
 //     });
 //  }
 
-  // const EMAIL = "rebeca@mail.com";
+  // const EMAIL = "@mail.com";
   // const PASSWORD = "123asd";
 
   // const login = (userData) => {
@@ -87,6 +87,10 @@ function App() {
         } else {
           window.alert("¡No hay personajes con este ID!");
         }
+      })
+      .catch(error => {
+        console.error('Error al buscar el personaje:', error);
+        window.alert("¡Ocurrió un error al buscar el personaje!");
       });
   }
 
